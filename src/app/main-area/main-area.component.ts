@@ -1,16 +1,12 @@
-
-import { Component, NgModule, VERSION } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { Pipe, PipeTransform } from '@angular/core';  
-import { FormsModule } from '@angular/forms';
-import { FilterPipe }from './app.filter';
+import { Component, OnInit, VERSION } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-main-area',
+  templateUrl: './main-area.component.html',
+  styleUrls: ['./main-area.component.css']
 })
-export class AppComponent {
+export class MainAreaComponent implements OnInit {
+
   title = 'Job-Portal';
   sessionAction:string="Login/Logout" // control through code
 
@@ -24,6 +20,8 @@ export class AppComponent {
   searchText:string = "";
   selected_count:number = 0;
   
+
+ 
   
   
   // Data Object to list of work from home
@@ -92,7 +90,7 @@ export class AppComponent {
     }
   ]
   
-  allFilters:string[] = [];
+  
 
   
   // Getting Selected 
@@ -200,8 +198,8 @@ export class AppComponent {
     this.getSelected();
    
   }
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
+  }
   
 }
-
- 
-

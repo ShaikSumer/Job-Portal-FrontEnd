@@ -1,0 +1,117 @@
+body{
+    font-family:Arial;
+  }
+  
+  .filter-input{
+    font-size:20px;
+    padding:3px;
+    border-radius:4px;
+    border:3px solid rgb(206, 182, 182);
+    margin-bottom:5px;
+    padding-right: 30px;
+  }
+  
+  .clear-selection {
+      font-size: 12px;
+      font-weight: bold;
+      color: orange;
+      cursor:pointer;
+      position: absolute;
+  }
+  
+  .work-list {
+      margin-top: 35px;
+  }
+  
+  li.work-item {
+      list-style: none;
+      font-size: 15px;
+      padding: 1px 0px;
+  }
+  li.work-item input{
+    height: 15px;
+      width: 20px;
+  }
+  
+  .work-text{
+    vertical-align:top;
+  }
+  
+  .selected-work {
+      display: inline-block;
+      margin-right: 15px;
+      font-size: 24px;
+      background: #1c569e;
+      margin-bottom: 10px;
+      padding: 2px 11px 4px 11px;
+      border-radius: 8px;
+  }
+
+
+  .selected-experience {
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 24px;
+    background: #1c569e;
+    margin-bottom: 10px;
+    padding: 2px 11px 4px 11px;
+    border-radius: 8px;
+}
+
+.selected-education {
+  display: inline-block;
+  margin-right: 15px;
+  font-size: 24px;
+  background: #1c569e;
+  margin-bottom: 10px;
+  padding: 2px 11px 4px 11px;
+  border-radius: 8px;
+}
+
+
+.selected-salary {
+  display: inline-block;
+  margin-right: 15px;
+  font-size: 24px;
+  background: #1c569e;
+  margin-bottom: 10px;
+  padding: 2px 11px 4px 11px;
+  border-radius: 8px;
+}
+  
+  .delete-work{
+      font-size: 15px;
+      padding: 3px 6px;
+      vertical-align:middle;
+      cursor:pointer;
+  }
+  .delete-work:hover{
+      background: #597290;
+      padding: 3px 6px;
+      border-radius: 15px;
+  }
+
+
+  .delete-experience{
+    font-size: 15px;
+    padding: 3px 6px;
+    vertical-align:middle;
+    cursor:pointer;
+}
+.delete-experience:hover{
+    background: #506f95;
+    padding: 3px 6px;
+    border-radius: 15px;
+}
+  
+  .filter-wrap{
+    position:relative ;
+   
+  }
+  
+  .filter-clear{
+      position: absolute;
+      margin-left: -24px;
+      margin-top: 11px;
+      cursor:pointer;
+  }

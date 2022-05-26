@@ -1,0 +1,39 @@
+<table>
+  
+    <tr>
+      <td>
+        <div>
+          <app-main-area></app-main-area>
+        </div>
+    
+    </td>
+    
+    <td>
+    
+    <div class="border">
+    <table style="height:100%; width:100%;text-align:center">
+    
+        <tr *ngFor="let jobs of jobsList">
+        
+          <td><div style="color:rgba(214, 130, 27, 0.764) ;font-style:italic ;font-size: x-large;" > {{jobs.companyName}}</div>  </td>
+          <td><div style="color:rgb(51, 207, 155);font-style:italic ;font-size:  large;" > {{jobs.jobRole}}</div> </td>
+          <td><div style="color:rgb(84, 136, 231) ;font-style:italic ;font-size:  large;" > {{jobs.salary}}</div> </td>
+          <td><div style="color:rgb(255, 0, 136) ;font-style:italic ;font-size:  large;" > {{jobs.location}}</div> </td>
+          <td><div style="color:rgb(164, 50, 190) ;font-style:italic ;font-size:  large;" > {{jobs.experience}}</div> </td>
+          <td><div style="color:rgb(169, 60, 109) ;font-style:italic ;font-size:  large;" > {{jobs.education}}</div> </td>
+          <td><button style="background-color:aquamarine ;"><a routerLink="jobs" > Open</a></button> </td>
+        
+      </tr>
+    </table>
+    </div>
+    </td>
+    
+    
+    </tr>
+    
+    </table>
+
+
+
+
+   

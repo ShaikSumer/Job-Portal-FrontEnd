@@ -1,0 +1,8 @@
+.border{
+   
+    border: 1.5px;
+    border-width: 2px;
+    border-style:inset;
+    border-color: rgb(246, 22, 194);
+    
+}

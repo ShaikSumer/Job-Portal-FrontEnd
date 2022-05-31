@@ -3,7 +3,29 @@
     <tr>
       <td>
         <div>
-          <app-main-area></app-main-area>
+          <table>
+            <tr>Work mode</tr>
+            <tr *ngFor="let x of work">
+                <td><input [(ngModel)]="x.checked" value="{{x.name}}" (change)="onChange($event)" type="checkbox"></td>
+                <td>{{x.name}}</td>
+                
+            </tr>
+            <tr>experience</tr>
+            <tr *ngFor="let x of experience">
+              <td><input [(ngModel)]="x.checked" id="{{x.min}}" value="{{x.max}}" (change)="onChange1($event)" type="checkbox"></td>
+              <td>{{x.name}}</td>
+            </tr>
+            <tr>salary</tr>
+            <tr *ngFor="let x of salary">
+              <td><input [(ngModel)]="x.checked" id="{{x.min}}" value="{{x.max}}" (change)="onChange2($event)" type="checkbox"></td>
+              <td>{{x.name}}</td>
+            </tr>
+            <tr>education</tr>
+            <tr *ngFor="let x of education">
+              <td><input [(ngModel)]="x.checked" value="{{x.name}}" (change)="onChange3($event)" type="checkbox"></td>
+              <td>{{x.name}}</td>
+            </tr>
+          </table>
         </div>
     
     </td>
@@ -13,14 +35,14 @@
     <div class="border">
     <table style="height:100%; width:100%;text-align:center">
     
-        <tr *ngFor="let jobs of jobsList">
+        <tr *ngFor="let job of Jobs" >
         
-          <td><div style="color:rgba(214, 130, 27, 0.764) ;font-style:italic ;font-size: x-large;" > {{jobs.companyName}}</div>  </td>
-          <td><div style="color:rgb(51, 207, 155);font-style:italic ;font-size:  large;" > {{jobs.jobRole}}</div> </td>
-          <td><div style="color:rgb(84, 136, 231) ;font-style:italic ;font-size:  large;" > {{jobs.salary}}</div> </td>
-          <td><div style="color:rgb(255, 0, 136) ;font-style:italic ;font-size:  large;" > {{jobs.location}}</div> </td>
-          <td><div style="color:rgb(164, 50, 190) ;font-style:italic ;font-size:  large;" > {{jobs.experience}}</div> </td>
-          <td><div style="color:rgb(169, 60, 109) ;font-style:italic ;font-size:  large;" > {{jobs.education}}</div> </td>
+          <td><div style="color:rgba(214, 130, 27, 0.764) ;font-style:italic ;font-size: x-large;" >{{job.companyName}} </div>  </td>
+          <td><div style="color:rgb(51, 207, 155);font-style:italic ;font-size:  large;" > {{job.jobRole}}</div> </td>
+          <td><div style="color:rgb(84, 136, 231) ;font-style:italic ;font-size:  large;" > {{job.salary}}</div> </td>
+          <td><div style="color:rgb(255, 0, 136) ;font-style:italic ;font-size:  large;" >{{job.location}} </div> </td>
+          <td><div style="color:rgb(164, 50, 190) ;font-style:italic ;font-size:  large;" > {{job.experience}}</div> </td>
+          <td><div style="color:rgb(169, 60, 109) ;font-style:italic ;font-size:  large;" >{{job.education}}</div> </td>
           <td><button style="background-color:aquamarine ;"><a routerLink="jobs" > Open</a></button> </td>
         
       </tr>

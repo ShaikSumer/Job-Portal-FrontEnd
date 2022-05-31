@@ -52,7 +52,7 @@ const routes:Routes = [
     FormsModule,
     Ng2SearchPipeModule,
   ],
-  providers: [],
+  providers: [RightComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

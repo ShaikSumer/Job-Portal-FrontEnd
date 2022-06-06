@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ApiService } from '../Api.service';
 
 
@@ -16,7 +17,7 @@ export class RightComponent implements OnInit {
   service:ApiService;
 
 
-  constructor(service1:ApiService) {
+  constructor(service1:ApiService,private router:Router) {
     
     this.service=service1;
    
@@ -24,9 +25,15 @@ export class RightComponent implements OnInit {
   Jobs:any[]=[];
   Jobs2:any[]=[];
   getJobs(){
-    this.Jobs=this.service.jobsService();
-    this.Jobs2=this.service.jobsService();
-    
+    this.service.getAllProducts().subscribe((data:any)=>{
+      this.Jobs=data;
+      this.Jobs2=data;
+      console.log(this.Jobs)
+    },
+   error=>{
+     console.log(error);
+   } );
+   
   }
   ngOnInit(): void {
 
@@ -40,7 +47,7 @@ export class RightComponent implements OnInit {
     
 
     if(event.target.checked){
-      this.tempArray=this.Jobs2.filter((e:any)=>e.type == event.target.value);
+      this.tempArray=this.Jobs2.filter((e:any)=>e.workType == event.target.value);
      
       this.Jobs=[];
       this.newArray.push(this.tempArray);
@@ -167,7 +174,7 @@ onChange3(event:any){
 
   if(event.target.checked){
     this.tempArray3=this.Jobs2.filter((e:any)=>e.education == event.target.value);
-   
+   console.log(this.tempArray3);
     this.Jobs=[];
     this.newArray3.push(this.tempArray3);
     console.log(this.newArray3);
@@ -202,6 +209,16 @@ else{
 
 
 }
+}
+doThings(name:any){
+  this.Jobs.forEach(a=>{
+    if(a.company==name){
+      this.service.getSelectedJob(a);
+    }
+  });
+  this.router.navigate([`${'/jobs'}`]);
+
+
 }
 
 
